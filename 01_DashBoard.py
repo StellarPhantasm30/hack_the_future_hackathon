@@ -88,8 +88,8 @@ st.set_page_config(
     page_icon="📄",
 )
 
-# st.title("📄🤖 _Agentic_ Resume Screening System")
-st.header(":violet[**_Agentic Resume Screening System_**]", divider="violet")
+st.title("📄:violet[ **_ResumeLens AI_**]")
+# st.header(":violet[**_ResumeLens AI_**]", divider="violet")
 st.markdown(
     "**This dashboard showcases the results of our multi-agent system that processes resumes against job descriptions.**"
 )

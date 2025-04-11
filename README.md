@@ -38,10 +38,10 @@ The system follows a multi-step process orchestrated by different Python scripts
 2.  **Job Analysis (`job_summary_extraction.py`):** Extracts key requirements and points from each job description using Ollama and stores them in the `job_listings` table in `candidates.db`.
 3.  **Resume Ingestion & OCR (`document_processing.py`):** Processes input PDF resumes, performs OCR to extract text content, and stores the raw text (or path) in the `candidates` table in `candidates.db`.
 4.  **Resume PII Extraction (`candidate_pii_extraction.py`):** Analyzes resume text using Ollama to find and store candidate email addresses and phone numbers in the `candidates` table.
-5.  **Resume Analysis (`resume_summary_extraction.py`):** Extracts key skills and summaries from resume text using Ollama (optionally asynchronously for speed) and stores them in the `candidates` table.
-6.  **Vectorization (`resume_vector_db.py`):** Creates vector embeddings for the processed resumes (based on extracted text/skills) and builds a searchable vector index (e.g., HNSW).
-7.  **Matching & Scoring (`resume_matching.py`):** Compares job description key points against the resume vector index using HNSW to identify and score top matching candidates for each job. Stores matched candidate emails in the `job_listings` table.
-8.  **Email Generation (`email_templating.py`):** Creates tailored draft outreach emails for each job description using Ollama, potentially incorporating job key points, and stores them in the `job_listings` table.
+5.  **Resume Analysis (`resume_summary_extraction.py`):** Extracts key skills and summaries from resume text using Ollama and stores them in the `candidates` table.
+6.  **Vectorization (`resume_vector_db.py`):** Creates vector embeddings for the processed resumes (based on extracted text/skills) and builds a searchable vector index (HNSW).
+7.  **Matching & Scoring (`resume_matching.py`):** Compares job description key points against the resume vector index using HNSW to identify and get top matching candidates for each job, followed by local reasoning models to generate detailed match scores and justifications, all stored in the database in the `job_listings` table.
+8.  **Email Generation (`email_templating.py`):** Creates tailored draft outreach emails for each job description using Ollama, incorporating job key points, and stores them in the `job_listings` table.
 9.  **Visualization (`01_DashBoard.py`):** A Streamlit application reads the processed data from `candidates.db` to provide an interactive interface for exploring job listings, their key points, the matched candidates, and the generated emails.
 
 ---

@@ -1,6 +1,4 @@
-crewai
 dotenv
-crewai[tools]
 ollama
 docling
 pip-system-certs
