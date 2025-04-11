@@ -1,0 +1,6 @@
+*.env
+*.whl
+faiss_index/
+*.db
+Data/
+agentenv/

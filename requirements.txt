@@ -1,0 +1,13 @@
+crewai
+dotenv
+crewai[tools]
+ollama
+docling
+pip-system-certs
+python-certifi-win32
+huggingface_hub
+faiss-cpu
+langchain-community
+langchain-huggingface
+xformers
+streamlit
