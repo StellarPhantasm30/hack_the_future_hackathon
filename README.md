@@ -89,6 +89,8 @@ This guide focuses on running the Streamlit dashboard to showcase the _pre-proce
 - **Input:** The system is designed to process PDF resumes and a CSV file containing job titles and descriptions. (These are expected to be in the `Data/` directory but are gitignored).
 - **Output:** All processed data, extracted insights, candidate matches, and generated emails are stored in the `candidates.db` SQLite database. Resume vector embeddings are stored separately (in `faiss_index/`, also gitignored). For convenient analysis, the `candidates` and `job_listings` tables from candidates.db have been exported to `candidates.xlsx` and `job_listings.xlsx` respectively."
 
----
+Here's a demo of my project: [My Video Demo](https://drive.google.com/file/d/1ypdSPwPE9ub_p9pRuHi4NJzyWH9jiHe3/view?usp=drivesdk)
+
 ## License
+
 This project is built for the [Hack the Future] Hackathon and is not licensed for commercial use.
